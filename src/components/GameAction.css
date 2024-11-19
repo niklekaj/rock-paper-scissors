@@ -1,0 +1,33 @@
+.game-start {
+    display: flex;
+    justify-content: space-around;
+
+    & img {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        padding: 24px;
+        background: white;
+        border-radius: 50%;
+    }
+}
+
+.game-result {
+    display: flex;
+    justify-content: space-around;
+
+    .selection-label {
+        margin-bottom: 12px
+    }
+
+    & img {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        padding: 24px;
+        background: white;
+        border-radius: 50%;
+    }
+}
