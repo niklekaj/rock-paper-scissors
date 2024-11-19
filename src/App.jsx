@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
@@ -7,12 +7,30 @@ import { GameAction } from './components/GameAction'
 import { Rules } from './components/Rules'
 
 function App() {
-  // const [count, setCount] = useState(0)
+  const [score, setScore] = useState(0)
+
+  const manageScore = (roundResultForUser) => {
+    console.log("incoming: ", roundResultForUser)
+
+    if(roundResultForUser === "won") {
+      setScore(score + 1)
+      return
+    }
+
+    if(roundResultForUser === "lost") {
+      setScore(prevScore => Math.max(0, prevScore - 1));
+      return
+    }
+    
+    return
+  }
+
+  console.log("Score: ", score)
 
   return (
     <>
       <Score></Score>
-      <GameAction></GameAction>
+      <GameAction manageScore={manageScore} />
       <Rules></Rules>
     </>
   )
