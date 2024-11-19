@@ -1,0 +1,7 @@
+.score {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 700;
+}

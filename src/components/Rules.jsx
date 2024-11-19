@@ -5,7 +5,7 @@ export function Rules() {
 
     return (
       <>
-      Rules
+      [This would be a placeholder for rules]
       </>
     )
   }

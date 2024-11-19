@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-      <Score></Score>
+      <Score score={score}></Score>
       <GameAction manageScore={manageScore} />
       <Rules></Rules>
     </>

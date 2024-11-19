@@ -31,3 +31,12 @@
         border-radius: 50%;
     }
 }
+
+.play-again {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 50%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}

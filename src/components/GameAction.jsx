@@ -66,28 +66,29 @@ export function GameAction({ manageScore }) {
       {/* user and computer selection */}
       {gameStatus !== 'play' && (
         <>
-        <div className='game-result'>
-          <div className='user'>
-            <div className='selection-label'>
-                You picked:
-            </div>
-            {userSelection === 'rock' && <div><img src={RockIcon} /></div>}
-            {userSelection === 'paper' && <div><img src={PaperIcon} /></div>}
-            {userSelection === 'scissors' && <div><img src={ScissorsIcon} /></div>}
-          </div>
+            <div className='game-result'>
+                <div className='user'>
+                    <div className='selection-label'>
+                        You picked:
+                    </div>
+                    {userSelection === 'rock' && <div><img src={RockIcon} /></div>}
+                    {userSelection === 'paper' && <div><img src={PaperIcon} /></div>}
+                    {userSelection === 'scissors' && <div><img src={ScissorsIcon} /></div>}
+                </div>
 
-          <div className='computer'>
-            <div className='selection-label'>
-             The house picked:
+                <div className='computer'>
+                    <div className='selection-label'>
+                    The house picked:
+                    </div>
+                    {computerRandomSelection === 'rock' && <div><img src={RockIcon} /></div>}
+                    {computerRandomSelection === 'paper' && <div><img src={PaperIcon} /></div>}
+                    {computerRandomSelection === 'scissors' && <div><img src={ScissorsIcon} /></div>}
+                </div>
             </div>
-            {computerRandomSelection === 'rock' && <div><img src={RockIcon} /></div>}
-            {computerRandomSelection === 'paper' && <div><img src={PaperIcon} /></div>}
-            {computerRandomSelection === 'scissors' && <div><img src={ScissorsIcon} /></div>}
-          </div>
-        </div>
-        <div>
-            You {gameStatus}
-        </div>
+            <div>
+                You {gameStatus}
+            </div>
+            <button className='play-again' onClick={() => setGameStatus('play')}> Play again</button>
         </>
       )}
     </>

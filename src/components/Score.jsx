@@ -1,11 +1,21 @@
 // import { useState } from 'react'
-// import './App.css'
+import './Score.css'
+import LogoIcon from '../../images/logo.svg'
 
-export function Score() {
+export function Score({ score }) {
 
     return (
       <>
-      Score
+        <div className="score">
+          <div>
+            <img src={LogoIcon} />
+          </div>
+          <div>
+            <div>
+              <div>Score: {score}</div>
+            </div>
+          </div>
+        </div>
       </>
     )
   }
