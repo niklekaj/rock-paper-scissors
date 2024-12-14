@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import './GameAction.css'
-import RockIcon from '../../images/icon-rock.svg'
-import PaperIcon from '../../images/icon-paper.svg'
-import ScissorsIcon from '../../images/icon-scissors.svg'
-import TriangleIcon from '../../images/bg-triangle.svg'
+import RockIcon from '/images/icon-rock.svg'
+import PaperIcon from '/images/icon-paper.svg'
+import ScissorsIcon from '/images/icon-scissors.svg'
+import TriangleIcon from '/images/bg-triangle.svg'
 
 export function GameAction({ manageScore }) {
   const [userSelection, setUserSelection] = useState(null)

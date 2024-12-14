@@ -1,6 +1,6 @@
 // import { useState } from 'react'
 import './Score.css'
-import LogoIcon from '../../images/logo.svg'
+import LogoIcon from '/images/logo.svg'
 
 export function Score({ score }) {
 
