@@ -23,9 +23,9 @@ export function GameAction({ manageScore }) {
     setComputerRandomSelection(computerSelection)
   }
 
-  const updateGameStatus = (status) => {
-    setGameStatus(status);
-    manageScore(status);
+  const updateGameStatus = (roundResultForUser) => {
+    setGameStatus(roundResultForUser);
+    manageScore(roundResultForUser);
   };
 
   useEffect(() => {
@@ -94,7 +94,7 @@ export function GameAction({ manageScore }) {
             <div className='game-result-label'>
                 {getGameStatus()}
             </div>
-            <button className='play-again' onClick={() => setGameStatus('play')}> Play again</button>
+            <button className='play-again' onClick={() => setGameStatus('play')}>Next Round</button>
         </>
       )}
     </>

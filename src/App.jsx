@@ -5,18 +5,28 @@ import { GameAction } from './components/GameAction'
 import { Rules } from './components/Rules'
 
 function App() {
-  const [score, setScore] = useState(0)
+  const [score, setScore] = useState({userScore: 0, computerScore: 0})
 
   const manageScore = (roundResultForUser) => {
     console.log("incoming: ", roundResultForUser)
 
     if(roundResultForUser === "won") {
-      setScore(score + 1)
+      setScore(prevScore => {
+        return {
+          ...prevScore,
+          userScore: prevScore.userScore + 1
+        }
+      });
       return
     }
 
     if(roundResultForUser === "lost") {
-      setScore(prevScore => Math.max(0, prevScore - 1));
+      setScore(prevScore => {
+        return {
+          ...prevScore,
+          computerScore: prevScore.computerScore + 1
+        }
+      });
       return
     }
     

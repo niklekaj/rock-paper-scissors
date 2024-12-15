@@ -11,7 +11,7 @@ export function Score({ score }) {
             <img src={LogoIcon} />
           </div>
           <div className='score-label'>
-            <span>Score: {score}</span>
+            <span>Score: You {score.userScore} - {score.computerScore} Computer</span>
           </div>
         </div>
       </>
