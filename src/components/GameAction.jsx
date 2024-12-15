@@ -84,11 +84,11 @@ export function GameAction({ manageScore }) {
 
                 <div className='computer'>
                     <div className='selection-label'>
-                    The computer picked:
+                      The computer picked:
                     </div>
-                    {computerRandomSelection === 'rock' && <div><img src={RockIcon} /></div>}
-                    {computerRandomSelection === 'paper' && <div><img src={PaperIcon} /></div>}
-                    {computerRandomSelection === 'scissors' && <div><img src={ScissorsIcon} /></div>}
+                    {computerRandomSelection === 'rock' && <div className='computer-selection'><img src={RockIcon} /></div>}
+                    {computerRandomSelection === 'paper' && <div className='computer-selection'><img src={PaperIcon} /></div>}
+                    {computerRandomSelection === 'scissors' && <div className='computer-selection'><img src={ScissorsIcon} /></div>}
                 </div>
             </div>
             <div className='game-result-label'>

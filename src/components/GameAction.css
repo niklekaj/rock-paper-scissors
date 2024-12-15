@@ -7,8 +7,8 @@
     gap: 48px;
 
     & img {
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height: 50px;
         display: flex;
         justify-content: center;
         padding: 24px;
@@ -23,6 +23,11 @@
         /* justify-content: space-between; */
         flex-direction: row;
         margin-top: 128px;
+
+        & img {
+            width: 100px;
+            height: 100px;
+        }
     }
 
     .game-result {
@@ -37,6 +42,11 @@
 .game-result-label {
     margin-top: 32px;
     margin-bottom: 8px;
+}
+
+.computer-selection {
+    display: flex;
+    justify-content: center;
 }
 
 /* .game-result {
