@@ -29,7 +29,7 @@ function App() {
     <>
       <Score score={score}></Score>
       <GameAction manageScore={manageScore} />
-      <Rules></Rules>
+      {/* <Rules></Rules> */}
     </>
   )
 }

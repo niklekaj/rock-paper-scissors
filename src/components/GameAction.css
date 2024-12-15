@@ -1,6 +1,10 @@
-.game-start {
+.game-start, .game-result {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: 48px;
 
     & img {
         width: 100px;
@@ -13,7 +17,29 @@
     }
 }
 
-.game-result {
+@media (min-width: 480px) {
+    .game-start, .game-result {
+        display: flex;
+        /* justify-content: space-between; */
+        flex-direction: row;
+        margin-top: 128px;
+    }
+
+    .game-result {
+        margin-top: 8px;
+    }
+}
+
+.selection-label {
+    margin-bottom: 16px;
+}
+
+.game-result-label {
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+/* .game-result {
     display: flex;
     justify-content: space-around;
 
@@ -30,7 +56,7 @@
         background: white;
         border-radius: 50%;
     }
-}
+} */
 
 .play-again {
     display: flex;
@@ -40,3 +66,4 @@
     margin-top: 24px;
     margin-bottom: 24px;
 }
+

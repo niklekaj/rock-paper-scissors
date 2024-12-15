@@ -7,13 +7,11 @@ export function Score({ score }) {
     return (
       <>
         <div className="score">
-          <div>
+          <div className='score-logo'>
             <img src={LogoIcon} />
           </div>
-          <div>
-            <div>
-              <div>Score: {score}</div>
-            </div>
+          <div className='score-label'>
+            <span>Score: {score}</span>
           </div>
         </div>
       </>

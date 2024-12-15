@@ -46,6 +46,12 @@ export function GameAction({ manageScore }) {
 
   console.log("GS: ", gameStatus)
 
+  const getGameStatus = () => {
+    if(gameStatus === 'won') return "🥳 You won 🥳"
+    if(gameStatus === 'lost') return "😔 You lost 😔"
+    return "🙃 You drew 🙃"
+  }
+
   return (
     <>
       {/* game start */}
@@ -78,15 +84,15 @@ export function GameAction({ manageScore }) {
 
                 <div className='computer'>
                     <div className='selection-label'>
-                    The house picked:
+                    The computer picked:
                     </div>
                     {computerRandomSelection === 'rock' && <div><img src={RockIcon} /></div>}
                     {computerRandomSelection === 'paper' && <div><img src={PaperIcon} /></div>}
                     {computerRandomSelection === 'scissors' && <div><img src={ScissorsIcon} /></div>}
                 </div>
             </div>
-            <div>
-                You {gameStatus}
+            <div className='game-result-label'>
+                {getGameStatus()}
             </div>
             <button className='play-again' onClick={() => setGameStatus('play')}> Play again</button>
         </>
